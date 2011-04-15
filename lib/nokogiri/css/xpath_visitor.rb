@@ -34,6 +34,8 @@ module Nokogiri
           "contains(., #{node.value[1]})"
         when /^gt\(/
           "position() > #{node.value[1]}"
+        when /^lt\(/
+          "position() < #{node.value[1]}"
         when /^only-child\(/
           "last() = 1"
         when /^comment\(/
